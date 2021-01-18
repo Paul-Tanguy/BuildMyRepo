@@ -1,0 +1,23 @@
+##
+## EPITECH PROJECT, 2021
+## eza
+## File description:
+## Makefile
+##
+
+BIN	=	aze
+
+CC	=	g++
+
+MAIN	=	sources/main.cpp
+SRC	=	sources/aze.cpp
+
+MAINO	=	$(MAIN:%.cpp=%.o)
+OBJ	=	$(SRC:%.cpp=%.o)
+
+CPPFLAGS	=	-W -Wall -Iincludes
+
+all:	$(BIN)
+
+$(BIN):	$(OBJ) $(MAINO)
+		$(CC) -o $(BIN) $(MAINO) $(OBJ) $(CPPFLAGS)
