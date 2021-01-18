@@ -6,10 +6,12 @@ $repo = "myProject"
 
 def copyFiles()
   system("cp -v #{$AssetsDir}/main.cpp ./sources/main.cpp")
+  system("cp -v #{$AssetsDir}/binary.cpp ./sources/#{$binary}.cpp")
   system("cp -v #{$AssetsDir}/header.hpp ./includes/#{$binary}.hpp")
   system("cp -v #{$AssetsDir}/Makefile ./Makefile")
   system("cp -v #{$AssetsDir}/Testfile ./tests/Makefile")
   system("cp -v #{$AssetsDir}/test_basic.cpp ./tests/sources/test_basic.cpp")
+  system("cp -v #{$AssetsDir}/my_criterion.hpp ./tests/my_criterion.hpp")
 end
 
 def makeDirs()
@@ -27,7 +29,13 @@ def updateFiles()
     :"<% repository %>" => "#{$repo}",
   }
   files = [
-    "sources/main.cpp", "includes/#{$binary}.hpp", "Makefile", "tests/Makefile",
+    "sources/main.cpp",
+    "sources/#{$binary}.cpp",
+    "includes/#{$binary}.hpp",
+    "Makefile",
+    "tests/Makefile",
+    "tests/sources/test_basic.cpp",
+    "tests/my_criterion.hpp",
   ]
 
   files.each() do |file|

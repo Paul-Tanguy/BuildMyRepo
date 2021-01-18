@@ -42,12 +42,12 @@ OBJECTS		=	$(SOURCES:%.cpp=%.o)
 all:		$(BINARY)
 
 $(BINARY):	$(OBJECTS) $(MAINO)
-			$(CC) -o $(BIN) $(MAINO) $(OBJECTS) $(CFLAGS)
+			$(CC) -o $(BINARY) $(MAINO) $(OBJECTS) $(CFLAGS)
 # !compilation #
 
 # unit tests #
 tests_run:	CPPFLAGS += --coverage
-tests_run:	$(OBJ)
+tests_run:	$(OBJECTS)
 			$(MAKE) -C $(TSTDIR) re
 # !unit tests #
 

@@ -17,7 +17,7 @@ TSTDIR		=	sources
 CC			=	g++
 MAKE		=	make
 RM			=	rm -rf
-CPPFLAGS	=	-W -Wall -Wextra -Wshadow -I$(INCDIR) -lcriterion -lgcov
+CPPFLAGS	=	-W -Wall -Wextra -Wshadow -I$(INCDIR) -I. -lcriterion -lgcov
 # !constants #
 
 # binary #
@@ -27,7 +27,7 @@ BINARY		=	unit_tests
 # sources #
 RAWTESTS	=	test_basic.cpp	\
 
-RAWSRC		=	main.cpp		\
+RAWSRC		=	<% binary %>.cpp		\
 
 # !sources #
 
