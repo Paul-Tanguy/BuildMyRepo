@@ -5,6 +5,7 @@ $binary = "myProject"
 $repo = "myProject"
 
 def copyFiles()
+  system("cp -v #{$AssetsDir}/gitignore ./.gitignore")
   system("cp -v #{$AssetsDir}/main.cpp ./sources/main.cpp")
   system("cp -v #{$AssetsDir}/binary.cpp ./sources/#{$binary}.cpp")
   system("cp -v #{$AssetsDir}/header.hpp ./includes/#{$binary}.hpp")
@@ -36,6 +37,7 @@ def updateFiles()
     "tests/Makefile",
     "tests/sources/test_basic.cpp",
     "tests/my_criterion.hpp",
+    ".gitignore",
   ]
 
   files.each() do |file|

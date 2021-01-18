@@ -1,0 +1,23 @@
+# binaries #
+*.a
+*.o
+*.out
+*.bin
+*.gcno
+*.gcda
+*.gcov
+<% binary %>
+# !binaries #
+
+# temp files #
+*tmp
+tmp*
+*.bkp
+_main.cpp
+*~
+*#
+# !temp files #
+
+# special cases #
+.vscode
+# !special cases #
