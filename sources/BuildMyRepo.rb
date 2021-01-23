@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-$AssetsDir = "~/Docs/Epi/CTM/BuildMyRepo/assets"
+$AssetsDir = "~/Documents/BuildMyRepo/assets"
 $binary = "myProject"
 $repo = "myProject"
 
